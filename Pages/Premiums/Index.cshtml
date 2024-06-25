@@ -5,15 +5,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 >Index</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">
+        <button class="buttonCreate premium-buttons">
+            <a>Create New</a>
+        </button>
+    </a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.Premium[0].Title)
             </th>
             <th>
@@ -44,9 +48,9 @@
                 @Html.DisplayFor(modelItem => item.Student.Email)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                    <a asp-page="./Edit" class="table-options premium-buttons" asp-route-id="@item.id">Edit</a> |
+                    <a asp-page="./Details" class="table-options premium-buttons" asp-route-id="@item.id">Details</a> |
+                    <a asp-page="./Delete" class="table-options premium-buttons" asp-route-id="@item.id">Delete</a>
             </td>
         </tr>
 }

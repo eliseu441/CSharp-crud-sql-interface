@@ -18,7 +18,6 @@ namespace crud_interface.Pages_Premiums
         {
             _context = context;
         }
-
         public IList<Premium> Premium { get;set; } = default!;
 
         public async Task OnGetAsync()
